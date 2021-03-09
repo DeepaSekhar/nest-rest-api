@@ -1,5 +1,10 @@
+import { IsInt, IsString } from 'class-validator';
+
 export class CreateItemDto {
-    readonly name: string;
-    readonly description: string;
-    readonly qty: number;
+  @IsString()
+  name: string;
+  @IsString()
+  description: string;
+  @IsInt()
+  quantity: number;
 }
